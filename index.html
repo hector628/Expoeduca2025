@@ -88,8 +88,7 @@
     }
     #slider {
       display: flex;
-      width: 400%;
-      transition: transform 0.5s ease;
+      transition: transform 1s ease;
     }
     #slider img {
       height: auto;
@@ -208,7 +207,7 @@
           index = (index + step + totalSlides) % totalSlides;
           slider.style.transform = `translateX(-${index * 100}%)`;
         }
-        setInterval(() => moveSlide(1), 5000);
+        
       </script>
     </section>
 
