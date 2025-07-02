@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expoeduca 2025 - Secundaria Dr. Gabino Barreda</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Expoeduca 2025 - Secundaria Dr. Gabino Barreda">
+  <meta property="og:description" content="Conoce los proyectos académicos y creativos desarrollados por nuestros alumnos.">
+  <meta property="og:image" content="Logo_GB.png">
   <style>
     body {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Fira Code', monospace;
       margin: 0;
       padding: 0;
       background-color: #000;
@@ -26,16 +31,24 @@
     }
     header img {
       max-height: 100px;
-      margin-bottom: 1rem;
-      align-self: center;
     }
     header h1 {
-      font-family: 'Courier New', monospace;
       font-size: 2.5rem;
       font-weight: bold;
-      display: inline-block;
-      text-align: center;
       margin: 0;
+    }
+    nav {
+      text-align: center;
+      margin: 1rem auto;
+    }
+    nav a {
+      color: #BFFF00;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
       padding: 2rem;
@@ -66,6 +79,45 @@
     ul, p {
       line-height: 1.6;
     }
+    .slider-container {
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #BFFF00;
+    }
+    #slider {
+      display: flex;
+      width: 400%;
+      transition: transform 0.5s ease;
+    }
+    #slider img {
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      flex-shrink: 0;
+      width: 100%;
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #BFFF00;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .slider-btn:hover {
+      transform: translateY(-50%) scale(1.2);
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
     @media (max-width: 600px) {
       main {
         padding: 1rem;
@@ -95,17 +147,27 @@
     <h1>
       <div>
         <span style='color: #FFA500;'>E</span><span style='color: #00BFFF;'>x</span><span style='color: #8A2BE2;'>p</span><span style='color: #FF69B4;'>o</span><span style='color: #00FF00;'>e</span><span style='color: #FF8C00;'>d</span><span style='color: #1E90FF;'>u</span><span style='color: #DA70D6;'>c</span><span style='color: #FF1493;'>a</span>
-        <span style='color: #000;'>2025</span>
+        <span style='color: #BFFF00;'>2025</span>
       </div>
       <div style='font-size: 1.2rem; font-weight: bold;'>Turno Vespertino</div>
     </h1>
   </header>
+
+  <nav>
+    <a href="#expoeduca">¿Qué es?</a>
+    <a href="#organizacion">Organización</a>
+    <a href="#actividades">Actividades</a>
+    <a href="#galeria">Galería</a>
+    <a href="#identidad">Identidad</a>
+  </nav>
+
   <main>
-    <section>
+    <section id="expoeduca">
       <h2>¿Qué es Expoeduca?</h2>
       <p>Es un evento académico anual en el que los estudiantes presentan proyectos creativos y científicos desarrollados durante el ciclo escolar. Participan todas las academias de la institución.</p>
     </section>
-    <section>
+
+    <section id="organizacion">
       <h2>Organización del Evento</h2>
       <ul>
         <li><strong>Primer bloque (14:20 – 16:00):</strong> Matemáticas, Español, Artes y Ciencias Sociales.</li>
@@ -113,7 +175,8 @@
         <li><strong>Segundo bloque (16:30 – 18:00):</strong> Inglés, Tecnología, Educación Física y Ciencias Naturales.</li>
       </ul>
     </section>
-    <section>
+
+    <section id="actividades">
       <h2>Actividades por Academia</h2>
       <div class="actividad"><h3>Inglés – Jeopardy</h3><p><strong>Lugar:</strong> Sala audiovisual</p><p>Concurso de preguntas de inglés básico en equipos.</p></div>
       <div class="actividad"><h3>Tecnología – Recicla e Innova, Puente, Costura, Electricidad</h3><p><strong>Lugar:</strong> Aula de medios / Taller de costura</p><p>Proyectos de construcción, diseño textil y circuitos eléctricos con materiales reciclados.</p></div>
@@ -124,17 +187,18 @@
       <div class="actividad"><h3>Español – Historias sin Palabras</h3><p><strong>Lugar:</strong> Biblioteca</p><p>Creación de narrativas a partir de imágenes sin texto.</p></div>
       <div class="actividad"><h3>Educación Física – El juego y la tecnología</h3><p><strong>Lugar:</strong> Cancha de basquetbol</p><p>Ruleta digital para asignar retos físicos a equipos.</p></div>
     </section>
-    <section>
+
+    <section id="galeria">
       <h2>Galería Expoeduca</h2>
-      <div style="max-width: 600px; margin: auto; position: relative; overflow: hidden; border: 2px solid #BFFF00;">
-        <div id="slider" style="display: flex; width: 400%; transition: transform 0.5s ease;">
-          <img src="1.jpg" alt="Foto Expoeduca 1" style="height: auto; max-height: 400px; object-fit: contain; flex-shrink: 0;">
-          <img src="2.jpg" alt="Foto Expoeduca 2" style="height: auto; max-height: 400px; object-fit: contain; flex-shrink: 0;">
-          <img src="3.jpg" alt="Foto Expoeduca 3" style="height: auto; max-height: 400px; object-fit: contain; flex-shrink: 0;">
-          <img src="4.jpg" alt="Foto Expoeduca 4" style="height: auto; max-height: 400px; object-fit: contain; flex-shrink: 0;">
+      <div class="slider-container">
+        <div id="slider">
+          <img src="1.jpg" alt="Foto Expoeduca 1">
+          <img src="2.jpg" alt="Foto Expoeduca 2">
+          <img src="3.jpg" alt="Foto Expoeduca 3">
+          <img src="4.jpg" alt="Foto Expoeduca 4">
         </div>
-        <button onclick="moveSlide(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: none; border: none; color: #BFFF00; font-size: 2rem; cursor: pointer;">&#10094;</button>
-        <button onclick="moveSlide(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: none; border: none; color: #BFFF00; font-size: 2rem; cursor: pointer;">&#10095;</button>
+        <button class="slider-btn prev" onclick="moveSlide(-1)" aria-label="Imagen anterior">&#10094;</button>
+        <button class="slider-btn next" onclick="moveSlide(1)" aria-label="Imagen siguiente">&#10095;</button>
       </div>
       <script>
         let index = 0;
@@ -144,15 +208,18 @@
           index = (index + step + totalSlides) % totalSlides;
           slider.style.transform = `translateX(-${index * 100}%)`;
         }
+        setInterval(() => moveSlide(1), 5000);
       </script>
     </section>
-    <section>
+
+    <section id="identidad">
       <h2>Nuestra Identidad</h2>
       <div style="text-align: center;">
-        <img src="Mascota_JPG.png" alt="Mascota orgullosamente de la 2" style="max-width: 150px; margin-top: 1rem;">
+        <img src="Mascota_JPG.png" alt="Mascota oficial de la secundaria Gabino Barreda" style="max-width: 150px; margin-top: 1rem;">
       </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Turno Vespertino.</p>
   </footer>
